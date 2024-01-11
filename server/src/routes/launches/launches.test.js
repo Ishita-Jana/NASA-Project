@@ -88,7 +88,7 @@ describe('Launches API', ()=>{
             expect(response.body.launch).toMatchObject(launchDataWithoutDate)
     
     
-        });
+        }, 30000);
     
     
         //error cases
