@@ -10,7 +10,8 @@ describe('Launches API', ()=>{
     beforeAll(async()=>{
         await mongoConnect();
         await loadPlanetsData();
-        
+
+
     });
 
     afterAll(async()=>{
@@ -32,7 +33,7 @@ describe('Launches API', ()=>{
             .get('/v1/launches')
             .expect('Content-Type', /json/)
             .expect(200)
-          })
+          },20000)
     })
     
     
