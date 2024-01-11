@@ -171,6 +171,9 @@ async function scheduleNewLaunch(launch){
             keplerName: launch.target
         })
 
+        console.log(planet);
+        console.log(launch.target);
+
         if(!planet){
             throw new Error('No matching planet was found');
         }
