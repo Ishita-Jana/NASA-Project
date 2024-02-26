@@ -11,7 +11,7 @@ const app = express();
 
 
 app.use(cors({
-    origin:'http://localhost:3000'
+    origin:'*'
 }));
 
 //HTTP request logger middleware that simplifies the process of logging to your application

@@ -1,0 +1,7 @@
+#this file is created to list all the files that needs to be excluded from the docker image
+#local dependencies will not be send to the machines instead fresh dependencies will be downloded specific to the docker image
+.git
+
+*/node_modules
+
+server/public
