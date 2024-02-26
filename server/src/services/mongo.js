@@ -16,8 +16,13 @@ mongoose.connection.on('error', (err)=>{
 })
 
 async function mongoConnect(){
-    await mongoose.connect(MONGO_URL);
-    console.log("connection established");
+    try {
+        await mongoose.connect(MONGO_URL);
+        console.log("connection established");
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error);
+    }
+   
 }
 
 async function mongoDisconnect(){
