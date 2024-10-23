@@ -1,12 +1,16 @@
 // import { post } from "../../../server/src/routes/launches/launches.router";
 
-const API_URL = 'http://localhost:8000/v1';
+
+
+// const API_URL = process.env.REACT_APP_Local_API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
+
 
 async function httpGetPlanets() {
-  // TODO: Once API is ready.
-  // Load planets and return as JSON.
   const response = await fetch(`${API_URL}/planets`);
-  console.log("requesting for getting all the planets");
+  // console.log("requesting for getting all the planets");
+  // console.log(await response.json());
+  // console.log(await response.json());
   return await response.json();
 
 }
