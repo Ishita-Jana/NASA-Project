@@ -28,7 +28,12 @@ const Launch = props => {
       <input type="text" id="rocket-name" name="rocket-name" defaultValue="Explorer IS1" />
       <label htmlFor="planets-selector">Destination Exoplanet</label>
       <select id="planets-selector" name="planets-selector">
-        {selectorBody}
+        {/* {selectorBody} */}
+        {props.planets && props.planets.length > 0 ? (
+            selectorBody
+          ) : (
+            <option disabled>Loading planets, please wait...</option>
+          )}
       </select>
       <Clickable>
         <Button animate 
